@@ -15,16 +15,24 @@ class _ResumeMainState extends State<ResumeMain> {
     return const Scaffold(
       backgroundColor: Colors.white,
       body: Padding(
-        padding: EdgeInsets.all(40.0),
-        child: Row(
-          children: [
-            Expanded(
-              flex: 1,
-              child: PersonInfo(),
+        padding: EdgeInsets.only(top: 40, left: 40, right: 40, bottom: 15),
+        child: Column(children: [
+          Expanded(
+            child: Row(
+              children: [
+                Expanded(
+                  flex: 1,
+                  child: PersonInfo(),
+                ),
+                Expanded(flex: 3, child: Experience())
+              ],
             ),
-            Expanded(flex: 3, child: Experience())
-          ],
-        ),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Text('Resume Created By Flutter')
+        ]),
       ),
     );
   }

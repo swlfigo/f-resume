@@ -15,7 +15,7 @@ class Experience extends StatelessWidget {
       ),
       Expanded(
           child: Padding(
-        padding: const EdgeInsets.all(20.0),
+        padding: const EdgeInsets.only(top: 20, left: 20, right: 20),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.stretch,
