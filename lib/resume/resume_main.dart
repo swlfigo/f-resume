@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:fresume/resume/experience/experience.dart';
-import 'package:fresume/resume/person_info/person_info.dart';
+import 'package:fresume/resume/resume_platform.dart';
+import 'package:fresume/utils/device_util.dart';
 
 class ResumeMain extends StatefulWidget {
   const ResumeMain({super.key});
@@ -12,27 +12,26 @@ class ResumeMain extends StatefulWidget {
 class _ResumeMainState extends State<ResumeMain> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       backgroundColor: Colors.white,
-      body: Padding(
-        padding: EdgeInsets.only(top: 40, left: 40, right: 40, bottom: 15),
-        child: Column(children: [
-          Expanded(
-            child: Row(
-              children: [
-                Expanded(
-                  flex: 1,
-                  child: PersonInfo(),
-                ),
-                Expanded(flex: 3, child: Experience())
-              ],
-            ),
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Text('Resume Created By Flutter')
-        ]),
+      body: LayoutBuilder(
+        builder: (BuildContext context, BoxConstraints constraints) {
+          var isMobileViewPort = true;
+          if (DeviceUtil().isMobile() || DeviceUtil().isWechat()) {
+            isMobileViewPort = true;
+          } else {
+            if (constraints.maxWidth < 600) {
+              isMobileViewPort = true;
+            } else {
+              isMobileViewPort = false;
+            }
+          }
+          Widget widgetForReturn = generateMobilePlatformWidget();
+          if (!isMobileViewPort) {
+            widgetForReturn = generateWebPlatformWidget();
+          }
+          return widgetForReturn;
+        },
       ),
     );
   }

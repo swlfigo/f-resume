@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:fresume/resume/infos.dart';
 
 class Contact extends StatelessWidget {
   Contact({super.key});
 
   final List<Map<String, Icon>> contactInfoMap = [
-    {'Your Birthday': const Icon(Icons.calendar_month_sharp)},
-    {'Your Email': const Icon(Icons.email)},
-    {'Your URL': const Icon(Icons.link)},
+    {myInfo.birthday: const Icon(Icons.calendar_month_sharp)},
+    {myInfo.email: const Icon(Icons.email)},
+    {myInfo.url: const Icon(Icons.link)},
   ];
 
   @override

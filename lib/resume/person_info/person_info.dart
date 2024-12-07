@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fresume/resume/contact_info/contact.dart';
 import 'package:fresume/resume/person_name/person_name.dart';
 import 'package:fresume/resume/skills/skills.dart';
 
@@ -26,7 +27,18 @@ class PersonInfo extends StatelessWidget {
                               minWidth: constraints.maxWidth),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.stretch,
-                            children: [const PersonName(), Skills()],
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.all(20.0),
+                                child: Column(
+                                  children: [
+                                    const PersonName(),
+                                    Contact(),
+                                  ],
+                                ),
+                              ),
+                              const Skills()
+                            ],
                           ),
                         ),
                       );
