@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fresume/resume/experience/experience_widget.dart';
 import 'package:fresume/resume/infos.dart';
 import 'package:fresume/resume/person_name/person_name_mobile.dart';
+import 'package:fresume/utils/device_util.dart';
 
 class ResumeMobile extends StatelessWidget {
   const ResumeMobile({super.key});
@@ -73,9 +74,9 @@ class ResumeMobile extends StatelessWidget {
                 const SizedBox(
                   height: 20,
                 ),
-                const Text(
-                  'Resume Created By Flutter',
-                  style: TextStyle(fontSize: 10),
+                Text(
+                  'Resume Created By Flutter ${DeviceUtil.get().ua}',
+                  style: const TextStyle(fontSize: 10),
                 )
               ],
             ),
