@@ -9,7 +9,7 @@ class Experience extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
       const Padding(
-        padding: EdgeInsets.all(20.0),
+        padding: EdgeInsets.only(top: 20, left: 30),
         child: Text(
           'Work Experience',
           style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
@@ -17,7 +17,7 @@ class Experience extends StatelessWidget {
       ),
       Expanded(
           child: Padding(
-        padding: const EdgeInsets.only(top: 20, left: 20, right: 20),
+        padding: const EdgeInsets.only(top: 20, left: 30, right: 20),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.stretch,
