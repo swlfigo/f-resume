@@ -1,3 +1,5 @@
+import 'dart:html';
+
 class DeviceUtil {
   static final DeviceUtil _instance = DeviceUtil._private();
 
@@ -8,8 +10,7 @@ class DeviceUtil {
   late String ua;
 
   DeviceUtil._private() {
-    // ua = window.navigator.userAgent;
-    ua = 'phone';
+    ua = window.navigator.userAgent;
   }
 
   //移动端
