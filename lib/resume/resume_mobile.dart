@@ -13,7 +13,7 @@ class ResumeMobile extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 24),
+        padding: const EdgeInsets.symmetric(horizontal: 40),
         child: Column(
           children: [
             const SizedBox(
@@ -46,7 +46,7 @@ class ResumeMobile extends StatelessWidget {
                       color: Colors.black),
                 ),
                 SizedBox(
-                  height: Appdimens.px20,
+                  height: Appdimens.px28,
                 ),
                 Text(
                   selfDescription,
@@ -69,9 +69,6 @@ class ResumeMobile extends StatelessWidget {
                       fontSize: Appdimens.px24,
                       fontWeight: FontWeight.bold,
                       color: Colors.black),
-                ),
-                SizedBox(
-                  height: Appdimens.px20,
                 ),
                 Column(
                     children: myExperience.map((item) {
