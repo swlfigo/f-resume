@@ -16,7 +16,7 @@ class _ResumeMainState extends State<ResumeMain> {
   }
 
   Widget _getPlatformWidget() {
-    if (kIsWeb) {
+    if (!kIsWeb) {
       return generateMobilePlatformWidget();
     } else {
       return generateWebPlatformWidget();
