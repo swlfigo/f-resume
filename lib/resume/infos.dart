@@ -50,6 +50,12 @@ final List<Map<String, String>> SkillsSetInfo = [
 const String selfDescription =
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam quis leo ut libero lacinia eleifend et a quam. Donec bibendum, ligula ut mattis porttitor, tellus elit condimentum lectus, ut blandit sapien ligula sed justo. In tristique nulla eu suscipit condimentum. Sed in ex leo. Fusce metus dolor, suscipit ac ligula non, suscipit tristique nulla. Maecenas aliquet pharetra dolor, eu pellentesque massa scelerisque ut. Cras ac urna a enim maximus commodo. Proin consequat nunc et pulvinar mattis. Pellentesque quis mauris ut erat scelerisque hendrerit. Fusce tristique vel dui sagittis auctor. Suspendisse lobortis euismod tortor, a ornare tellus. Praesent quam massa, eleifend in fringilla condimentum, mollis sit amet mauris.';
 
+final List<Map<String, String>> contactInfoMap = [
+  {'Birthday: ': myInfo.birthday},
+  {'Email: ': myInfo.email},
+  {'URL: ': myInfo.url},
+];
+
 class ExperienceInfoModel {
   final String companyName;
   final String titleName;

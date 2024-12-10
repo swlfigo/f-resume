@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fresume/resume/infos.dart';
+import 'package:fresume/utils/colors_ext.dart';
 
 class PersonNameMobile extends StatelessWidget {
   const PersonNameMobile({super.key});
@@ -22,22 +23,27 @@ class PersonNameMobile extends StatelessWidget {
         const SizedBox(
           height: 20,
         ),
-        const Text(
-          'Personal Info',
-          style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+        Align(
+          alignment: Alignment.center,
+          child: Column(
+            children: [
+              Text(
+                myInfo.name,
+                style: const TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              Text(
+                myInfo.title,
+                style: TextStyle(fontSize: 16, color: HexColor('#666666')),
+              ),
+            ],
+          ),
         ),
-        const SizedBox(
-          height: 10,
-        ),
-        Text('${myInfo.name}/${myInfo.gender}/${myInfo.birthday}'),
-        const SizedBox(
-          height: 5,
-        ),
-        Text(myInfo.email),
-        const SizedBox(
-          height: 5,
-        ),
-        Text(myInfo.url),
       ],
     );
   }

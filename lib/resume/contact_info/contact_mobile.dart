@@ -3,14 +3,19 @@ import 'package:fresume/resume/infos.dart';
 import 'package:fresume/utils/colors_ext.dart';
 import 'package:fresume/utils/dimens.dart';
 
-class Contact extends StatelessWidget {
-  const Contact({super.key});
+class ContactMobile extends StatefulWidget {
+  const ContactMobile({super.key});
 
+  @override
+  State<ContactMobile> createState() => _ContactMobileState();
+}
+
+class _ContactMobileState extends State<ContactMobile> {
   @override
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.start,
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         SizedBox(
           height: Appdimens.px28,
@@ -27,35 +32,39 @@ class Contact extends StatelessWidget {
         ),
         IntrinsicWidth(
           child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
               children: contactInfoMap.map((item) {
-                return Column(
+            return Column(
+              children: [
+                Row(
                   children: [
-                    Row(
-                      children: [
-                        Expanded(
-                          child: Text(
-                            item.keys.first,
-                            style: TextStyle(
-                                fontSize: Appdimens.px16, color: Colors.black),
-                          ),
+                    Flexible(
+                      child: Wrap(children: [
+                        Text(
+                          item.keys.first,
+                          style: TextStyle(
+                              fontSize: Appdimens.px16, color: Colors.black),
                         ),
-                        Expanded(
-                            child: Text(
+                      ]),
+                    ),
+                    Flexible(
+                      child: Wrap(children: [
+                        Text(
                           item.values.first,
                           style: TextStyle(
                             color: HexColor('666666'),
                             fontSize: Appdimens.px16,
                           ),
-                        )),
-                      ],
+                        ),
+                      ]),
                     ),
-                    const SizedBox(
-                      height: 10,
-                    )
                   ],
-                );
-              }).toList()),
+                ),
+                const SizedBox(
+                  height: 10,
+                )
+              ],
+            );
+          }).toList()),
         ),
       ],
     );
