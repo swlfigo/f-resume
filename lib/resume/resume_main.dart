@@ -12,10 +12,12 @@ class ResumeMain extends StatefulWidget {
 class _ResumeMainState extends State<ResumeMain> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        backgroundColor: Colors.white,
-        body:
-            Align(alignment: Alignment.topCenter, child: _getPlatformWidget()));
+    return SelectionArea(
+      child: Scaffold(
+          backgroundColor: Colors.white,
+          body: Align(
+              alignment: Alignment.topCenter, child: _getPlatformWidget())),
+    );
   }
 
   Widget _getPlatformWidget() {

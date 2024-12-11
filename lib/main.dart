@@ -9,9 +9,7 @@ void main() {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(const GetMaterialApp(
     title: 'My Resume',
-    home: kDebugMode
-        ? SelectionArea(child: ResumeMain())
-        : SelectionArea(child: WelcomeSplash()),
+    home: kDebugMode ? ResumeMain() : WelcomeSplash(),
   ));
   SemanticsBinding.instance.ensureSemantics();
 }
