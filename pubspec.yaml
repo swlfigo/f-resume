@@ -38,7 +38,6 @@ dependencies:
   get: ^4.6.6
   flutter_svg: ^2.0.16
   flutter_tags: ^1.0.0-nullsafety.1
-  chinese_font_library: ^1.2.0
 
 dev_dependencies:
   flutter_test:
