@@ -51,9 +51,9 @@ const String selfDescription =
     'iOS8年+开发经验,熟悉Objective-C,了解Swift,SwiftUI,Flutter.熟练使用Xcode,Cocoapod等开发工具.丰富开发经验,掌握iOS各组件开发使用及对常用第三方库使用.了解Python,Golang,JS等常用语言开发使用.英语过CET6具备良好的英文读写能力.有很强自学能力,喜欢专研技术.热爱编程,责任心强,有独立思考和解决问题能力';
 
 final List<Map<String, String>> contactInfoMap = [
-  {'Birthday: ': myInfo.birthday},
-  {'Email: ': myInfo.email},
-  {'URL: ': myInfo.url},
+  {'assets/images/emoji_cake.png': myInfo.birthday},
+  {'assets/images/emoji_mail.png': myInfo.email},
+  {'assets/images/emoji_url.png': myInfo.url},
 ];
 
 class ExperienceInfoModel {

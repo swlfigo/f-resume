@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:fresume/resume/resume_platform.dart';
@@ -21,7 +23,7 @@ class _ResumeMainState extends State<ResumeMain> {
   }
 
   Widget _getPlatformWidget() {
-    if (!kIsWeb) {
+    if (!kIsWeb && !Platform.isMacOS && !Platform.isWindows) {
       return generateMobilePlatformWidget();
     } else {
       return generateWebPlatformWidget();

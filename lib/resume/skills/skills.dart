@@ -64,33 +64,36 @@ class Skills extends StatelessWidget {
       itemBuilder: (index) {
         return Container(
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
+              borderRadius: BorderRadius.circular(20),
               color: HexColor('F2F2F2')),
-          child: Row(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              SizedBox(
-                width: Appdimens.px16,
-              ),
-              SizedBox(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: 10),
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                SizedBox(
                   width: Appdimens.px16,
-                  height: Appdimens.px16,
-                  child: SvgPicture.asset(SkillsSetInfo[index].values.first)),
-              SizedBox(
-                width: Appdimens.px4,
-              ),
-              Flexible(
-                  child: Wrap(children: [
-                Text(
-                  SkillsSetInfo[index].keys.first,
-                  style:
-                      TextStyle(color: Colors.black, fontSize: Appdimens.px16),
-                )
-              ])),
-              SizedBox(
-                width: Appdimens.px16,
-              ),
-            ],
+                ),
+                SizedBox(
+                    width: Appdimens.px16,
+                    height: Appdimens.px16,
+                    child: SvgPicture.asset(SkillsSetInfo[index].values.first)),
+                SizedBox(
+                  width: Appdimens.px4,
+                ),
+                Flexible(
+                    child: Wrap(children: [
+                  Text(
+                    SkillsSetInfo[index].keys.first,
+                    style: TextStyle(
+                        color: Colors.black, fontSize: Appdimens.px16),
+                  )
+                ])),
+                SizedBox(
+                  width: Appdimens.px16,
+                ),
+              ],
+            ),
           ),
         );
       },

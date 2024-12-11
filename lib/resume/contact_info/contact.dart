@@ -30,26 +30,25 @@ class Contact extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: contactInfoMap.map((item) {
                 return Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    Row(
-                      children: [
-                        Expanded(
-                          child: Text(
-                            item.keys.first,
-                            style: TextStyle(
-                                fontSize: Appdimens.px16, color: Colors.black),
-                          ),
+                    RichText(
+                        text: TextSpan(children: [
+                      WidgetSpan(
+                        child: Image.asset(
+                          item.keys.first,
+                          width: 20,
+                          height: 20,
                         ),
-                        Expanded(
-                            child: Text(
-                          item.values.first,
-                          style: TextStyle(
-                            color: HexColor('666666'),
-                            fontSize: Appdimens.px16,
-                          ),
-                        )),
-                      ],
-                    ),
+                      ),
+                      TextSpan(
+                        text: ' : ${item.values.first}',
+                        style: TextStyle(
+                          color: HexColor('666666'),
+                          fontSize: Appdimens.px16,
+                        ),
+                      )
+                    ])),
                     const SizedBox(
                       height: 10,
                     )

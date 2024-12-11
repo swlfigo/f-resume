@@ -34,31 +34,25 @@ class _ContactMobileState extends State<ContactMobile> {
           child: Column(
               children: contactInfoMap.map((item) {
             return Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                Row(
-                  children: [
-                    Flexible(
-                      child: Wrap(children: [
-                        Text(
-                          item.keys.first,
-                          style: TextStyle(
-                              fontSize: Appdimens.px16, color: Colors.black),
-                        ),
-                      ]),
+                RichText(
+                    text: TextSpan(children: [
+                  WidgetSpan(
+                    child: Image.asset(
+                      item.keys.first,
+                      width: 20,
+                      height: 20,
                     ),
-                    Flexible(
-                      child: Wrap(children: [
-                        Text(
-                          item.values.first,
-                          style: TextStyle(
-                            color: HexColor('666666'),
-                            fontSize: Appdimens.px16,
-                          ),
-                        ),
-                      ]),
+                  ),
+                  TextSpan(
+                    text: ' : ${item.values.first}',
+                    style: TextStyle(
+                      color: HexColor('666666'),
+                      fontSize: Appdimens.px16,
                     ),
-                  ],
-                ),
+                  )
+                ])),
                 const SizedBox(
                   height: 10,
                 )
