@@ -38,7 +38,7 @@ class Skills extends StatelessWidget {
           height: Appdimens.px28,
         ),
         Text(
-          'Your Description',
+          'Description',
           style: TextStyle(
               fontWeight: FontWeight.bold,
               color: Colors.black,

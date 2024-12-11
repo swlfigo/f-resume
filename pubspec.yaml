@@ -38,6 +38,7 @@ dependencies:
   get: ^4.6.6
   flutter_svg: ^2.0.16
   flutter_tags: ^1.0.0-nullsafety.1
+  chinese_font_library: ^1.2.0
 
 dev_dependencies:
   flutter_test:
@@ -77,7 +78,16 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
+  fonts:
+    - family: Harmony
+      fonts:
+        - asset: assets/fonts/HarmonyOS_Sans_Regular.ttf
+
+    - family: HarmonyOS_Sans_Bold
+      fonts:
+        - asset: assets/fonts/HarmonyOS_Sans_Bold.ttf
+          weight: 700
+
   #   - family: Schyler
   #     fonts:
   #       - asset: fonts/Schyler-Regular.ttf
