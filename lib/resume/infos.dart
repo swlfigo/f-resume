@@ -48,7 +48,7 @@ final List<Map<String, String>> SkillsSetInfo = [
 ];
 
 const String selfDescription =
-    'iOS8年+开发经验,熟悉Objective-C,了解Swift,SwiftUI,Flutter.熟练使用Xcode,Cocoapod等开发工具.丰富开发经验,掌握iOS各组件开发使用及对常用第三方库使用.了解Python,Golang,JS等常用语言开发使用.英语过CET6具备良好的英文读写能力.有很强自学能力,喜欢专研技术.热爱编程,责任心强,有独立思考和解决问题能力';
+    'iOS 8年+ 丰富开发经验,熟悉Objective-C,了解Swift,SwiftUI,Flutter;熟练使用Xcode,Cocoapod,Git等开发工具。掌握iOS各组件开发使用及对常用第三方库使用。了解Python,Golang,JS等常用语言开发使用。英语通过CET6,具备良好的英文读写能力。有很强自学能力,喜欢专研技术.热爱编程,责任心强,有独立思考和解决问题能力。';
 
 final List<Map<String, String>> contactInfoMap = [
   {'assets/images/emoji_cake.png': myInfo.birthday},
@@ -68,7 +68,7 @@ class ExperienceInfoModel {
 }
 
 final List<ExperienceInfoModel> myExperience = [
-  ExperienceInfoModel("Web3项目开发", "全栈开发", "2022.12 - 2024.05",
+  ExperienceInfoModel("Web3项目开发", "全栈开发", "2022.12 - 2024.12",
       "使用Golang,Redis等技术开发", "使用Golang,Redis等技术开发"),
   ExperienceInfoModel(
       "阿里巴巴(中国)有限公司",
